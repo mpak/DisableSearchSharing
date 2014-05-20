@@ -12,7 +12,7 @@ Some applications crash at launch:
 
 * Skype - crashes when any (even empty) library injected
 * Mou - requires library compiled with `-fobjc-gb` but gcc does not support it any more
-* iOS Simulator does not work (starts with black screen) if XCode was launched with this library injected
+* iPhone Simulator - starts with black screen and do nothing (even when DYLD_INSERT_LIBRARIES is unset now but was set at XCode or AppCode launch time)
 * something else I have no installed
 
 ## Description
