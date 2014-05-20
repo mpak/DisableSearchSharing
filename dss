@@ -1,0 +1,59 @@
+#!/bin/sh
+
+# CONFIG
+# set correct path
+lib_path="$HOME/libs/DisableSearchSharing.dylib"
+# END CONFIG
+
+
+if [ ! -f "$lib_path" ]; then
+  echo "Library not found at path: $lib_path"
+  exit 1
+fi
+
+
+show_help()
+{
+  cat <<END_HELP
+Disable sharing of search field's content between applications
+  usage: $0 APP|no APP|start|stop|state|lib
+    APP    - run APP with library injected
+    no APP - run APP without library injected
+    start  - disable sharing for current session
+    stop   - enable sharing for current session
+    state  - print value of DYLD_INSERT_LIBRARIES
+    lib    - print path to library
+END_HELP
+  exit
+}
+
+
+[ -z "$1" ] && show_help
+
+case "$1" in
+  "lib")
+    echo "$lib_path"
+    ;;
+  "start")
+    launchctl setenv DYLD_INSERT_LIBRARIES "$lib_path"
+    ;;
+  "stop")
+    launchctl unsetenv DYLD_INSERT_LIBRARIES
+    ;;
+  "state")
+    value=$(launchctl getenv DYLD_INSERT_LIBRARIES)
+    if [ -n "$value" ]; then
+      echo DYLD_INSERT_LIBRARIES="$value"
+    fi
+    ;;
+  "no")
+    shift
+    DYLD_INSERT_LIBRARIES= open -a "$@"
+    ;;
+  "-h")
+    show_help
+    ;;
+  *)
+    DYLD_INSERT_LIBRARIES="$lib_path" open -a "$@"
+    ;;
+esac

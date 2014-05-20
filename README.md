@@ -54,12 +54,21 @@ gcc -Wno-objc-method-access \
 DYLD_INSERT_LIBRARIES=/path/to/DisableSearchSharing.dylib open -a ApplicationName
 ```
 
-Of course you could define alias
+Of course you can define alias
 
 ```bash
 alias dss='DYLD_INSERT_LIBRARIES=/path/to/DisableSearchSharing.dylib open'
 dss file.txt
 dss -a Sublime\ Text file.txt
+```
+
+or use `dss` shell script (place library to `$HOME/libs/` or edit `$lib_path` variable in script):
+
+```bash
+dss Mail     # run Mail with library injected
+dss start    # enable global injecting for current session
+dss no XCode # run XCode without library injected
+dss stop     # disable global injecting
 ```
 
 ## Global setting
