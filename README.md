@@ -13,6 +13,10 @@ So, whenever you search something in browser then switch to IDE, you disclose yo
 
 There is no preference for disabling such behaviour. This is why this library was implemented.
 
+## Download
+
+[Get universal build](https://github.com/comscandiumplumbumd/DisableSearchSharing/releases/latest)
+
 ## Implemenation
 
 Library replaces AppKit's `[NSPasteboard setData:forType:]` and `[NSPasteboard dataForType:]` with own implementation which just do nothing when called on *NSFindPboard* pasteboard. Library loaded at application launch with setting `DYLD_INSERT_LIBRARIES` to appropriate value.
