@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0BB8FFAE-C2F5-4135-9922-39433C9465F5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DisableSearchSharing</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>94FE0047037FCEB67F30995C317819B3981E82CA</key>
+		<string>https://github.com/comscandiumplumbumd/DisableSearchSharing.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DisableSearchSharing.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>94FE0047037FCEB67F30995C317819B3981E82CA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/comscandiumplumbumd/DisableSearchSharing.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>94FE0047037FCEB67F30995C317819B3981E82CA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>94FE0047037FCEB67F30995C317819B3981E82CA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DisableSearchSharing</string>
+		</dict>
+	</array>
+</dict>
+</plist>
